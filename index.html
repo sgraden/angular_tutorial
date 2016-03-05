@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="UTF-8" />
+    <title>My first angular app</title>
+
+    <script src="angular.min.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body ng-controller="MainController">
+    <p>Welcome to {{appname}}</p>
+    <div class="input-practice">
+        <input type="text" ng-model="yourname">
+        <span>Your name: {{yourname}}</span>
+    </div>
+    <div class="repeat">
+        <div ng-repeat="friend in friendslist">{{friend}}</div>
+        <div ng-repeat="friend in emails">{{friend.name}} : {{friend.email}}</div>
+    </div>
+</body>
+</html>
